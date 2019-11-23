@@ -34,9 +34,9 @@ class CalculateViewController: UIViewController {
         let weightInKg = weightSlider.value / 2.205
         let heightInCm = heightSlider.value * 2.54
         let bmiValueNumber = weightInKg/pow((heightInCm/100), 2)
-        bmiValue = String(format: "%.0f", bmiValueNumber)
+        bmiValue = String(format: "%.2f", bmiValueNumber)
         
-        self.performSegue(withIdentifier: "goToResults", sender: self)
+        performSegue(withIdentifier: "goToResults", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
